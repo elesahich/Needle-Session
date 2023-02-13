@@ -1,0 +1,837 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3CD7F7D0299A93E900F18CCD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD7F7CF299A93E900F18CCD /* AppDelegate.swift */; };
+		3CD7F7D2299A93E900F18CCD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD7F7D1299A93E900F18CCD /* SceneDelegate.swift */; };
+		3CD7F7D4299A93E900F18CCD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD7F7D3299A93E900F18CCD /* ViewController.swift */; };
+		3CD7F7D7299A93E900F18CCD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CD7F7D5299A93E900F18CCD /* Main.storyboard */; };
+		3CD7F7D9299A93E900F18CCD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3CD7F7D8299A93E900F18CCD /* Assets.xcassets */; };
+		3CD7F7DC299A93E900F18CCD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CD7F7DA299A93E900F18CCD /* LaunchScreen.storyboard */; };
+		3CD7F7E7299A93E900F18CCD /* BeginnerAssignment_Needle_StartTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD7F7E6299A93E900F18CCD /* BeginnerAssignment_Needle_StartTests.swift */; };
+		3CD7F7F1299A93E900F18CCD /* BeginnerAssignment_Needle_StartUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD7F7F0299A93E900F18CCD /* BeginnerAssignment_Needle_StartUITests.swift */; };
+		3CD7F7F3299A93E900F18CCD /* BeginnerAssignment_Needle_StartUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD7F7F2299A93E900F18CCD /* BeginnerAssignment_Needle_StartUITestsLaunchTests.swift */; };
+		3CD7F802299A94CC00F18CCD /* NeedleGenerated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD7F801299A94CC00F18CCD /* NeedleGenerated.swift */; };
+		3CD7F806299A978300F18CCD /* NeedleFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = 3CD7F805299A978300F18CCD /* NeedleFoundation */; };
+		3CD7F809299A98D800F18CCD /* RootComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD7F808299A98D800F18CCD /* RootComponent.swift */; };
+		6EE3B523CE44B6AE5F55A57B /* Pods_BeginnerAssignment_Needle_Start_BeginnerAssignment_Needle_StartUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 389F7A1A5CFE2A6E1956786C /* Pods_BeginnerAssignment_Needle_Start_BeginnerAssignment_Needle_StartUITests.framework */; };
+		DF2E7FE8AE9186A1EC969514 /* Pods_BeginnerAssignment_Needle_StartTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F46362A13C36746E1DC559C1 /* Pods_BeginnerAssignment_Needle_StartTests.framework */; };
+		F725F1DDD9EFC0C421CAAEC4 /* Pods_BeginnerAssignment_Needle_Start.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAC54D96E748A1CC58C5656F /* Pods_BeginnerAssignment_Needle_Start.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3CD7F7E3299A93E900F18CCD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3CD7F7C4299A93E900F18CCD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3CD7F7CB299A93E900F18CCD;
+			remoteInfo = "BeginnerAssignment-Needle-Start";
+		};
+		3CD7F7ED299A93E900F18CCD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3CD7F7C4299A93E900F18CCD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3CD7F7CB299A93E900F18CCD;
+			remoteInfo = "BeginnerAssignment-Needle-Start";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0FC974121005C691FA09C9CB /* Pods-BeginnerAssignment-Needle-Start.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeginnerAssignment-Needle-Start.debug.xcconfig"; path = "Target Support Files/Pods-BeginnerAssignment-Needle-Start/Pods-BeginnerAssignment-Needle-Start.debug.xcconfig"; sourceTree = "<group>"; };
+		1F5E7BD02FBFB61A5376F167 /* Pods-BeginnerAssignment-Needle-StartTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeginnerAssignment-Needle-StartTests.debug.xcconfig"; path = "Target Support Files/Pods-BeginnerAssignment-Needle-StartTests/Pods-BeginnerAssignment-Needle-StartTests.debug.xcconfig"; sourceTree = "<group>"; };
+		2B564A6F9A3E68CE39FDD507 /* Pods-BeginnerAssignment-Needle-Start-BeginnerAssignment-Needle-StartUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeginnerAssignment-Needle-Start-BeginnerAssignment-Needle-StartUITests.release.xcconfig"; path = "Target Support Files/Pods-BeginnerAssignment-Needle-Start-BeginnerAssignment-Needle-StartUITests/Pods-BeginnerAssignment-Needle-Start-BeginnerAssignment-Needle-StartUITests.release.xcconfig"; sourceTree = "<group>"; };
+		389F7A1A5CFE2A6E1956786C /* Pods_BeginnerAssignment_Needle_Start_BeginnerAssignment_Needle_StartUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BeginnerAssignment_Needle_Start_BeginnerAssignment_Needle_StartUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		391EFC019C3DD1802CD0B868 /* Pods-BeginnerAssignment-Needle-Start.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeginnerAssignment-Needle-Start.release.xcconfig"; path = "Target Support Files/Pods-BeginnerAssignment-Needle-Start/Pods-BeginnerAssignment-Needle-Start.release.xcconfig"; sourceTree = "<group>"; };
+		3CD7F7CC299A93E900F18CCD /* BeginnerAssignment-Needle-Start.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BeginnerAssignment-Needle-Start.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3CD7F7CF299A93E900F18CCD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3CD7F7D1299A93E900F18CCD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		3CD7F7D3299A93E900F18CCD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3CD7F7D6299A93E900F18CCD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3CD7F7D8299A93E900F18CCD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3CD7F7DB299A93E900F18CCD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3CD7F7DD299A93E900F18CCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3CD7F7E2299A93E900F18CCD /* BeginnerAssignment-Needle-StartTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BeginnerAssignment-Needle-StartTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3CD7F7E6299A93E900F18CCD /* BeginnerAssignment_Needle_StartTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeginnerAssignment_Needle_StartTests.swift; sourceTree = "<group>"; };
+		3CD7F7EC299A93E900F18CCD /* BeginnerAssignment-Needle-StartUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BeginnerAssignment-Needle-StartUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3CD7F7F0299A93E900F18CCD /* BeginnerAssignment_Needle_StartUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeginnerAssignment_Needle_StartUITests.swift; sourceTree = "<group>"; };
+		3CD7F7F2299A93E900F18CCD /* BeginnerAssignment_Needle_StartUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeginnerAssignment_Needle_StartUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		3CD7F801299A94CC00F18CCD /* NeedleGenerated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeedleGenerated.swift; sourceTree = "<group>"; };
+		3CD7F808299A98D800F18CCD /* RootComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootComponent.swift; sourceTree = "<group>"; };
+		7414163E9F665C324EF3B06B /* Pods-BeginnerAssignment-Needle-Start-BeginnerAssignment-Needle-StartUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeginnerAssignment-Needle-Start-BeginnerAssignment-Needle-StartUITests.debug.xcconfig"; path = "Target Support Files/Pods-BeginnerAssignment-Needle-Start-BeginnerAssignment-Needle-StartUITests/Pods-BeginnerAssignment-Needle-Start-BeginnerAssignment-Needle-StartUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		CAC54D96E748A1CC58C5656F /* Pods_BeginnerAssignment_Needle_Start.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BeginnerAssignment_Needle_Start.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC8E08E30DF0A1C973FFA7BF /* Pods-BeginnerAssignment-Needle-StartTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeginnerAssignment-Needle-StartTests.release.xcconfig"; path = "Target Support Files/Pods-BeginnerAssignment-Needle-StartTests/Pods-BeginnerAssignment-Needle-StartTests.release.xcconfig"; sourceTree = "<group>"; };
+		F46362A13C36746E1DC559C1 /* Pods_BeginnerAssignment_Needle_StartTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BeginnerAssignment_Needle_StartTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3CD7F7C9299A93E900F18CCD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3CD7F806299A978300F18CCD /* NeedleFoundation in Frameworks */,
+				F725F1DDD9EFC0C421CAAEC4 /* Pods_BeginnerAssignment_Needle_Start.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3CD7F7DF299A93E900F18CCD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF2E7FE8AE9186A1EC969514 /* Pods_BeginnerAssignment_Needle_StartTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3CD7F7E9299A93E900F18CCD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6EE3B523CE44B6AE5F55A57B /* Pods_BeginnerAssignment_Needle_Start_BeginnerAssignment_Needle_StartUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3CD7F7C3299A93E900F18CCD = {
+			isa = PBXGroup;
+			children = (
+				3CD7F7CE299A93E900F18CCD /* BeginnerAssignment-Needle-Start */,
+				3CD7F7E5299A93E900F18CCD /* BeginnerAssignment-Needle-StartTests */,
+				3CD7F7EF299A93E900F18CCD /* BeginnerAssignment-Needle-StartUITests */,
+				3CD7F7CD299A93E900F18CCD /* Products */,
+				BD33163814709A3DB3467EEB /* Pods */,
+				F4FD732AD7F027C5B02BBD26 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		3CD7F7CD299A93E900F18CCD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3CD7F7CC299A93E900F18CCD /* BeginnerAssignment-Needle-Start.app */,
+				3CD7F7E2299A93E900F18CCD /* BeginnerAssignment-Needle-StartTests.xctest */,
+				3CD7F7EC299A93E900F18CCD /* BeginnerAssignment-Needle-StartUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3CD7F7CE299A93E900F18CCD /* BeginnerAssignment-Needle-Start */ = {
+			isa = PBXGroup;
+			children = (
+				3CD7F803299A96AE00F18CCD /* UselessStuff */,
+				3CD7F800299A94C400F18CCD /* Needle */,
+				3CD7F7FF299A94BA00F18CCD /* RootDelegates */,
+				3CD7F7D3299A93E900F18CCD /* ViewController.swift */,
+			);
+			path = "BeginnerAssignment-Needle-Start";
+			sourceTree = "<group>";
+		};
+		3CD7F7E5299A93E900F18CCD /* BeginnerAssignment-Needle-StartTests */ = {
+			isa = PBXGroup;
+			children = (
+				3CD7F7E6299A93E900F18CCD /* BeginnerAssignment_Needle_StartTests.swift */,
+			);
+			path = "BeginnerAssignment-Needle-StartTests";
+			sourceTree = "<group>";
+		};
+		3CD7F7EF299A93E900F18CCD /* BeginnerAssignment-Needle-StartUITests */ = {
+			isa = PBXGroup;
+			children = (
+				3CD7F7F0299A93E900F18CCD /* BeginnerAssignment_Needle_StartUITests.swift */,
+				3CD7F7F2299A93E900F18CCD /* BeginnerAssignment_Needle_StartUITestsLaunchTests.swift */,
+			);
+			path = "BeginnerAssignment-Needle-StartUITests";
+			sourceTree = "<group>";
+		};
+		3CD7F7FF299A94BA00F18CCD /* RootDelegates */ = {
+			isa = PBXGroup;
+			children = (
+				3CD7F7CF299A93E900F18CCD /* AppDelegate.swift */,
+				3CD7F7D1299A93E900F18CCD /* SceneDelegate.swift */,
+			);
+			path = RootDelegates;
+			sourceTree = "<group>";
+		};
+		3CD7F800299A94C400F18CCD /* Needle */ = {
+			isa = PBXGroup;
+			children = (
+				3CD7F801299A94CC00F18CCD /* NeedleGenerated.swift */,
+				3CD7F808299A98D800F18CCD /* RootComponent.swift */,
+			);
+			path = Needle;
+			sourceTree = "<group>";
+		};
+		3CD7F803299A96AE00F18CCD /* UselessStuff */ = {
+			isa = PBXGroup;
+			children = (
+				3CD7F7D5299A93E900F18CCD /* Main.storyboard */,
+				3CD7F7D8299A93E900F18CCD /* Assets.xcassets */,
+				3CD7F7DA299A93E900F18CCD /* LaunchScreen.storyboard */,
+				3CD7F7DD299A93E900F18CCD /* Info.plist */,
+			);
+			path = UselessStuff;
+			sourceTree = "<group>";
+		};
+		BD33163814709A3DB3467EEB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0FC974121005C691FA09C9CB /* Pods-BeginnerAssignment-Needle-Start.debug.xcconfig */,
+				391EFC019C3DD1802CD0B868 /* Pods-BeginnerAssignment-Needle-Start.release.xcconfig */,
+				7414163E9F665C324EF3B06B /* Pods-BeginnerAssignment-Needle-Start-BeginnerAssignment-Needle-StartUITests.debug.xcconfig */,
+				2B564A6F9A3E68CE39FDD507 /* Pods-BeginnerAssignment-Needle-Start-BeginnerAssignment-Needle-StartUITests.release.xcconfig */,
+				1F5E7BD02FBFB61A5376F167 /* Pods-BeginnerAssignment-Needle-StartTests.debug.xcconfig */,
+				CC8E08E30DF0A1C973FFA7BF /* Pods-BeginnerAssignment-Needle-StartTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		F4FD732AD7F027C5B02BBD26 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CAC54D96E748A1CC58C5656F /* Pods_BeginnerAssignment_Needle_Start.framework */,
+				389F7A1A5CFE2A6E1956786C /* Pods_BeginnerAssignment_Needle_Start_BeginnerAssignment_Needle_StartUITests.framework */,
+				F46362A13C36746E1DC559C1 /* Pods_BeginnerAssignment_Needle_StartTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3CD7F7CB299A93E900F18CCD /* BeginnerAssignment-Needle-Start */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3CD7F7F6299A93E900F18CCD /* Build configuration list for PBXNativeTarget "BeginnerAssignment-Needle-Start" */;
+			buildPhases = (
+				FD71FE65361DB12572E15D86 /* [CP] Check Pods Manifest.lock */,
+				3CD7F807299A979300F18CCD /* Needle */,
+				3CD7F7C8299A93E900F18CCD /* Sources */,
+				3CD7F7C9299A93E900F18CCD /* Frameworks */,
+				3CD7F7CA299A93E900F18CCD /* Resources */,
+				F1836CA49574537F1E1DD7CE /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "BeginnerAssignment-Needle-Start";
+			packageProductDependencies = (
+				3CD7F805299A978300F18CCD /* NeedleFoundation */,
+			);
+			productName = "BeginnerAssignment-Needle-Start";
+			productReference = 3CD7F7CC299A93E900F18CCD /* BeginnerAssignment-Needle-Start.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3CD7F7E1299A93E900F18CCD /* BeginnerAssignment-Needle-StartTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3CD7F7F9299A93E900F18CCD /* Build configuration list for PBXNativeTarget "BeginnerAssignment-Needle-StartTests" */;
+			buildPhases = (
+				DF28DDD7310901E66F2DCF88 /* [CP] Check Pods Manifest.lock */,
+				3CD7F7DE299A93E900F18CCD /* Sources */,
+				3CD7F7DF299A93E900F18CCD /* Frameworks */,
+				3CD7F7E0299A93E900F18CCD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3CD7F7E4299A93E900F18CCD /* PBXTargetDependency */,
+			);
+			name = "BeginnerAssignment-Needle-StartTests";
+			productName = "BeginnerAssignment-Needle-StartTests";
+			productReference = 3CD7F7E2299A93E900F18CCD /* BeginnerAssignment-Needle-StartTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3CD7F7EB299A93E900F18CCD /* BeginnerAssignment-Needle-StartUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3CD7F7FC299A93E900F18CCD /* Build configuration list for PBXNativeTarget "BeginnerAssignment-Needle-StartUITests" */;
+			buildPhases = (
+				EEC67E8CD2315FFB047B0ECD /* [CP] Check Pods Manifest.lock */,
+				3CD7F7E8299A93E900F18CCD /* Sources */,
+				3CD7F7E9299A93E900F18CCD /* Frameworks */,
+				3CD7F7EA299A93E900F18CCD /* Resources */,
+				2182802C09D9AA0AEAFFB4EE /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3CD7F7EE299A93E900F18CCD /* PBXTargetDependency */,
+			);
+			name = "BeginnerAssignment-Needle-StartUITests";
+			productName = "BeginnerAssignment-Needle-StartUITests";
+			productReference = 3CD7F7EC299A93E900F18CCD /* BeginnerAssignment-Needle-StartUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3CD7F7C4299A93E900F18CCD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1400;
+				LastUpgradeCheck = 1400;
+				TargetAttributes = {
+					3CD7F7CB299A93E900F18CCD = {
+						CreatedOnToolsVersion = 14.0;
+					};
+					3CD7F7E1299A93E900F18CCD = {
+						CreatedOnToolsVersion = 14.0;
+						TestTargetID = 3CD7F7CB299A93E900F18CCD;
+					};
+					3CD7F7EB299A93E900F18CCD = {
+						CreatedOnToolsVersion = 14.0;
+						TestTargetID = 3CD7F7CB299A93E900F18CCD;
+					};
+				};
+			};
+			buildConfigurationList = 3CD7F7C7299A93E900F18CCD /* Build configuration list for PBXProject "BeginnerAssignment-Needle-Start" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3CD7F7C3299A93E900F18CCD;
+			packageReferences = (
+				3CD7F804299A978300F18CCD /* XCRemoteSwiftPackageReference "needle" */,
+			);
+			productRefGroup = 3CD7F7CD299A93E900F18CCD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3CD7F7CB299A93E900F18CCD /* BeginnerAssignment-Needle-Start */,
+				3CD7F7E1299A93E900F18CCD /* BeginnerAssignment-Needle-StartTests */,
+				3CD7F7EB299A93E900F18CCD /* BeginnerAssignment-Needle-StartUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3CD7F7CA299A93E900F18CCD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3CD7F7DC299A93E900F18CCD /* LaunchScreen.storyboard in Resources */,
+				3CD7F7D9299A93E900F18CCD /* Assets.xcassets in Resources */,
+				3CD7F7D7299A93E900F18CCD /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3CD7F7E0299A93E900F18CCD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3CD7F7EA299A93E900F18CCD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2182802C09D9AA0AEAFFB4EE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BeginnerAssignment-Needle-Start-BeginnerAssignment-Needle-StartUITests/Pods-BeginnerAssignment-Needle-Start-BeginnerAssignment-Needle-StartUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BeginnerAssignment-Needle-Start-BeginnerAssignment-Needle-StartUITests/Pods-BeginnerAssignment-Needle-Start-BeginnerAssignment-Needle-StartUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BeginnerAssignment-Needle-Start-BeginnerAssignment-Needle-StartUITests/Pods-BeginnerAssignment-Needle-Start-BeginnerAssignment-Needle-StartUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3CD7F807299A979300F18CCD /* Needle */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Needle;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nexport SOURCEKIT_LIGGING=0 && /opt/homebrew/bin/needle generate BeginnerAssignment-Needle-Start/Needle/NeedleGenerated.swift BeginnerAssignment-Needle-Start/\n";
+		};
+		DF28DDD7310901E66F2DCF88 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BeginnerAssignment-Needle-StartTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EEC67E8CD2315FFB047B0ECD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BeginnerAssignment-Needle-Start-BeginnerAssignment-Needle-StartUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F1836CA49574537F1E1DD7CE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BeginnerAssignment-Needle-Start/Pods-BeginnerAssignment-Needle-Start-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BeginnerAssignment-Needle-Start/Pods-BeginnerAssignment-Needle-Start-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BeginnerAssignment-Needle-Start/Pods-BeginnerAssignment-Needle-Start-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FD71FE65361DB12572E15D86 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BeginnerAssignment-Needle-Start-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3CD7F7C8299A93E900F18CCD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3CD7F802299A94CC00F18CCD /* NeedleGenerated.swift in Sources */,
+				3CD7F7D4299A93E900F18CCD /* ViewController.swift in Sources */,
+				3CD7F7D0299A93E900F18CCD /* AppDelegate.swift in Sources */,
+				3CD7F809299A98D800F18CCD /* RootComponent.swift in Sources */,
+				3CD7F7D2299A93E900F18CCD /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3CD7F7DE299A93E900F18CCD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3CD7F7E7299A93E900F18CCD /* BeginnerAssignment_Needle_StartTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3CD7F7E8299A93E900F18CCD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3CD7F7F1299A93E900F18CCD /* BeginnerAssignment_Needle_StartUITests.swift in Sources */,
+				3CD7F7F3299A93E900F18CCD /* BeginnerAssignment_Needle_StartUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3CD7F7E4299A93E900F18CCD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3CD7F7CB299A93E900F18CCD /* BeginnerAssignment-Needle-Start */;
+			targetProxy = 3CD7F7E3299A93E900F18CCD /* PBXContainerItemProxy */;
+		};
+		3CD7F7EE299A93E900F18CCD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3CD7F7CB299A93E900F18CCD /* BeginnerAssignment-Needle-Start */;
+			targetProxy = 3CD7F7ED299A93E900F18CCD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3CD7F7D5299A93E900F18CCD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3CD7F7D6299A93E900F18CCD /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3CD7F7DA299A93E900F18CCD /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3CD7F7DB299A93E900F18CCD /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3CD7F7F4299A93E900F18CCD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3CD7F7F5299A93E900F18CCD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3CD7F7F7299A93E900F18CCD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0FC974121005C691FA09C9CB /* Pods-BeginnerAssignment-Needle-Start.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = BWM6S332K8;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "BeginnerAssignment-Needle-Start/UselessStuff/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.elesahich.kr.BeginnerAssignment-Needle-Start";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3CD7F7F8299A93E900F18CCD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 391EFC019C3DD1802CD0B868 /* Pods-BeginnerAssignment-Needle-Start.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = BWM6S332K8;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "BeginnerAssignment-Needle-Start/UselessStuff/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.elesahich.kr.BeginnerAssignment-Needle-Start";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		3CD7F7FA299A93E900F18CCD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1F5E7BD02FBFB61A5376F167 /* Pods-BeginnerAssignment-Needle-StartTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = BWM6S332K8;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.elesahich.kr.BeginnerAssignment-Needle-StartTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BeginnerAssignment-Needle-Start.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/BeginnerAssignment-Needle-Start";
+			};
+			name = Debug;
+		};
+		3CD7F7FB299A93E900F18CCD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CC8E08E30DF0A1C973FFA7BF /* Pods-BeginnerAssignment-Needle-StartTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = BWM6S332K8;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.elesahich.kr.BeginnerAssignment-Needle-StartTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BeginnerAssignment-Needle-Start.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/BeginnerAssignment-Needle-Start";
+			};
+			name = Release;
+		};
+		3CD7F7FD299A93E900F18CCD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7414163E9F665C324EF3B06B /* Pods-BeginnerAssignment-Needle-Start-BeginnerAssignment-Needle-StartUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = BWM6S332K8;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.elesahich.kr.BeginnerAssignment-Needle-StartUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "BeginnerAssignment-Needle-Start";
+			};
+			name = Debug;
+		};
+		3CD7F7FE299A93E900F18CCD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2B564A6F9A3E68CE39FDD507 /* Pods-BeginnerAssignment-Needle-Start-BeginnerAssignment-Needle-StartUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = BWM6S332K8;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.elesahich.kr.BeginnerAssignment-Needle-StartUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "BeginnerAssignment-Needle-Start";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3CD7F7C7299A93E900F18CCD /* Build configuration list for PBXProject "BeginnerAssignment-Needle-Start" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3CD7F7F4299A93E900F18CCD /* Debug */,
+				3CD7F7F5299A93E900F18CCD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3CD7F7F6299A93E900F18CCD /* Build configuration list for PBXNativeTarget "BeginnerAssignment-Needle-Start" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3CD7F7F7299A93E900F18CCD /* Debug */,
+				3CD7F7F8299A93E900F18CCD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3CD7F7F9299A93E900F18CCD /* Build configuration list for PBXNativeTarget "BeginnerAssignment-Needle-StartTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3CD7F7FA299A93E900F18CCD /* Debug */,
+				3CD7F7FB299A93E900F18CCD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3CD7F7FC299A93E900F18CCD /* Build configuration list for PBXNativeTarget "BeginnerAssignment-Needle-StartUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3CD7F7FD299A93E900F18CCD /* Debug */,
+				3CD7F7FE299A93E900F18CCD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3CD7F804299A978300F18CCD /* XCRemoteSwiftPackageReference "needle" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/uber/needle";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.22.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3CD7F805299A978300F18CCD /* NeedleFoundation */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3CD7F804299A978300F18CCD /* XCRemoteSwiftPackageReference "needle" */;
+			productName = NeedleFoundation;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 3CD7F7C4299A93E900F18CCD /* Project object */;
+}
