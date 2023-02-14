@@ -10,17 +10,9 @@ import RxSwift
 import struct RxCocoa.Driver
 
 final class SearchPresenter: SearchPresenterInterface {
-  let interactor: SearchInteractorInterface
-  let router: SearchRouterInterface
-  
-  init(
-    interactor: SearchInteractorInterface,
-    router: SearchRouterInterface
-  ) {
-    self.interactor = interactor
-    self.router = router
-  }
-  
+  var interactor: SearchInteractorInterface?
+  var router: SearchRouterInterface?
+    
   struct Input {
     let searchText: Observable<String>
     let reachtoBottom: Observable<Void>
@@ -34,10 +26,10 @@ final class SearchPresenter: SearchPresenterInterface {
 }
 
 extension SearchPresenter {
-  func transform(to inputs: Input) -> Output {
+  func transform(to inputs: Input, from view: UIViewController?) -> Output {
     weak var weakSelf = self
     
-    let searchedItem = interactor.fetchPaginatedSearchResult(
+    let searchedItem = interactor!.fetchPaginatedSearchResult(
       searchText: inputs.searchText.debounce(.milliseconds(300), scheduler: MainScheduler.asyncInstance),
       loadNextPage: inputs.reachtoBottom
     )
@@ -45,7 +37,7 @@ extension SearchPresenter {
     
     let modelSelected = inputs.modelSelected
       .flatMap { book -> Observable<Void> in
-        weakSelf?.router.showBookDetail(to: book)
+//        weakSelf?.router?.showBookDetail(to: book, from: view)
         return .just(())
       }
       

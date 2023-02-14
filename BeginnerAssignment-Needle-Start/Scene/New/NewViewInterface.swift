@@ -8,24 +8,24 @@
 import UIKit
 import RxSwift
 
-protocol NewViewInterface: class {
-  var presenter: NewPresenterInterface { get }
+protocol NewViewInterface: AnyObject {
+  var presenter: NewPresenterInterface? { get }
 }
 
-protocol NewInteractorInterface: class {
+protocol NewInteractorInterface: AnyObject {
   var networking: Networking { get }
 
   func fetchNewBookfromAPI() -> Observable<[Book]>
 }
 
-protocol NewPresenterInterface: class {
-  var router: NewRouterInterface { get }
-  var interactor: NewInteractorInterface { get }
+protocol NewPresenterInterface: AnyObject {
+  var router: NewRouterInterface? { get }
+  var interactor: NewInteractorInterface? { get }
   
-  func transform(to inputs: NewPresenter.Input) -> NewPresenter.Output
+  func transform(to inputs: NewPresenter.Input, from view: UIViewController?) -> NewPresenter.Output
 }
 
-protocol NewRouterInterface: class {
-  func showBookDetail(to model: Book)
+protocol NewRouterInterface: AnyObject {
+  func showBookDetail(to model: Book, from view: UIViewController?)
+  static func createModule() -> UIViewController
 }
-

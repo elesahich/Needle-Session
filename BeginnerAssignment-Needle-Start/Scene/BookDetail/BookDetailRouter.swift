@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-final class BookDetailRouter: NavigationRouterType, BookDetailRouterInterface {
+final class BookDetailRouter: BookDetailRouterInterface {
   let navigationController: UINavigationController
     
   init(navigationController: UINavigationController) {

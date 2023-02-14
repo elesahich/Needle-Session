@@ -8,33 +8,24 @@
 import UIKit
 import RealmSwift
 
-final class NewRouter: NavigationRouterType, NewRouterInterface {
-  let navigationController: UINavigationController
-  
-  init(navigationController: UINavigationController) {
-    self.navigationController = navigationController
-  }
-  
-  func start() {
-    showNewBookList()
-  }
-}
+final class NewRouter: NewRouterInterface { }
 
 extension NewRouter {
-  private func showNewBookList() {
+  static func createModule() -> UIViewController {
     let interactor = NewInteractor()
-    let presenter = NewPresenter(
-      router: self,
-      interactor: interactor
-    )
-    
-    let viewController = NewViewController(presenter: presenter)
-    navigationController.show(viewController, sender: nil)
+    let presenter = NewPresenter()
+    let router = NewRouter()
+    let view = NewViewController()
+    presenter.interactor = interactor
+    presenter.router = router
+    view.presenter = presenter
+
+    return view
   }
   
-  func showBookDetail(to model: Book) {
+  func showBookDetail(to model: Book, from view: UIViewController?) {
     let interactor = BookDetailInteractor()
-    let router = BookDetailRouter(navigationController: navigationController)
+    let router = BookDetailRouter(navigationController: UINavigationController(nibName: nil, bundle: nil))
     let presenter = BookDetailPresenter(
       interactor: interactor,
       router: router
@@ -45,6 +36,6 @@ extension NewRouter {
       presenter: presenter
     )
     bookDetailViewController.hidesBottomBarWhenPushed = true
-    navigationController.pushViewController(bookDetailViewController, animated: true)
+    view?.navigationController?.pushViewController(bookDetailViewController, animated: true)
   }
 }

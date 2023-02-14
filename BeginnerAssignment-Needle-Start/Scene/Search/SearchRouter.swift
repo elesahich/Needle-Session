@@ -8,45 +8,37 @@
 import UIKit
 import RealmSwift
 
-final class SearchRouter: NavigationRouterType, SearchRouterInterface {
-  let navigationController: UINavigationController
-  
-  init(navigationController: UINavigationController) {
-    self.navigationController = navigationController
-  }
-  
-  func start() {
-    showSearchView()
+final class SearchRouter: SearchRouterInterface { }
+
+extension SearchRouter {
+  static func createModule() -> UIViewController {
+    let interactor = SearchInteractor()
+    let presenter = SearchPresenter()
+    let router = SearchRouter()
+    let view = SearchViewController()
+    
+    presenter.interactor = interactor
+    presenter.router = router
+    view.presenter = presenter
+    
+    return view
   }
 }
 
 extension SearchRouter {
-  private func showSearchView() {
-    let interactor = SearchInteractor()
-    let presenter = SearchPresenter(
-      interactor: interactor,
-      router: self
-    )
-
-    let searchViewController = SearchViewController(
-      presenter: presenter
-    )
-    navigationController.show(searchViewController, sender: nil)
-  }
-  
   func showBookDetail(to model: Book) {
-    let interactor = BookDetailInteractor()
-    let router = BookDetailRouter(navigationController: navigationController)
-    let presenter = BookDetailPresenter(
-      interactor: interactor,
-      router: router
-    )
-    
-    let bookDetailViewController = BookDetailViewController(
-      book: model,
-      presenter: presenter
-    )
-    bookDetailViewController.hidesBottomBarWhenPushed = true
-    navigationController.pushViewController(bookDetailViewController, animated: true)
+//    let interactor = BookDetailInteractor()
+//    let router = BookDetailRouter(navigationController: navigationController)
+//    let presenter = BookDetailPresenter(
+//      interactor: interactor,
+//      router: router
+//    )
+//
+//    let bookDetailViewController = BookDetailViewController(
+//      book: model,
+//      presenter: presenter
+//    )
+//    bookDetailViewController.hidesBottomBarWhenPushed = true
+//    navigationController.pushViewController(bookDetailViewController, animated: true)
   }
 }

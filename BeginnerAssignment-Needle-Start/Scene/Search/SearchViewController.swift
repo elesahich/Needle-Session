@@ -13,13 +13,9 @@ import RealmSwift
 final class SearchViewController: UIViewController, SearchViewInterface {
   private let disposeBag = DisposeBag()
   private var bookListView: BaseCollectionView!
-  let presenter: SearchPresenterInterface
+  var presenter: SearchPresenterInterface?
   
-  init(
-    presenter: SearchPresenterInterface
-  ) {
-    self.presenter = presenter
-    
+  init() {
     super.init(nibName: nil, bundle: nil)
   }
   
@@ -54,9 +50,9 @@ extension SearchViewController {
       reachtoBottom: collectionView.rx.reachedBottom().asObservable(),
       modelSelected: collectionView.rx.modelSelected(Book.self).asObservable()
     )
-    let outputs = presenter.transform(to: inputs)
+    let outputs = presenter?.transform(to: inputs, from: self)
     
-    outputs.book
+    outputs?.book
       .drive(collectionView.rx.items(
               cellIdentifier: BaseCollectionViewCell.identifier,
               cellType: BaseCollectionViewCell.self)
@@ -65,7 +61,7 @@ extension SearchViewController {
       }
       .disposed(by: disposeBag)
     
-    outputs.modelSelected
+    outputs?.modelSelected
       .drive()
       .disposed(by: disposeBag)
   }

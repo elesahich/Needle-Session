@@ -13,11 +13,9 @@ import SnapKit
 final class NewViewController: UIViewController {
   private var bookListView: BaseCollectionView!
   private let disposeBag = DisposeBag()
-  private let presenter: NewPresenterInterface
-  
-  init(presenter: NewPresenterInterface) {
-    self.presenter = presenter
-    
+  var presenter: NewPresenterInterface?
+
+  init() {
     super.init(nibName: nil, bundle: nil)
   }
   
@@ -48,9 +46,9 @@ extension NewViewController {
       modelSelected: bookListView.collectionView.rx.modelSelected(Book.self).asObservable()
     )
     
-    let outputs = presenter.transform(to: inputs)
+    let outputs = presenter?.transform(to: inputs, from: self)
     
-    outputs.bookList
+    outputs?.bookList
       .drive(bookListView.collectionView.rx.items(
               cellIdentifier: BaseCollectionViewCell.identifier,
               cellType: BaseCollectionViewCell.self)
@@ -59,7 +57,7 @@ extension NewViewController {
       }
       .disposed(by: disposeBag)
     
-    outputs.sendDetailView
+    outputs?.sendDetailView
       .drive()
       .disposed(by: disposeBag)
   }

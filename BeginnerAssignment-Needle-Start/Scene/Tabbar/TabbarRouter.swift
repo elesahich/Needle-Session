@@ -12,13 +12,14 @@ enum TabbarChildType: Int {
   case search
 }
 
-final class TabbarRouter: NavigationRouterType {
-  let navigationController: UINavigationController
-  private var tabbarController: UITabBarController?
-  private var childRouters: [TabbarChildType: NavigationRouterType]
+final class TabbarRouter {
+  let tabbarBuilder: TabbarBuilder
+  private var childRouters: [TabbarChildType: UINavigationController]
   
-  init(navigationController: UINavigationController) {
-    self.navigationController = navigationController
+  init(
+    tabbarBuilder: TabbarBuilder
+  ) {
+    self.tabbarBuilder = tabbarBuilder
     self.childRouters = [:]
   }
 }
@@ -32,55 +33,51 @@ extension TabbarRouter {
   }
   
   
-  private func store(with router: NavigationRouterType, as type: TabbarChildType) {
+  private func store(with router: UINavigationController, as type: TabbarChildType) {
     childRouters[type] = router
   }
 }
 
 extension TabbarRouter {
   private func setupNewViewRouter() {
+    let controller = NewRouter.createModule()
     let newNavigationController = configureNavigationControllerWithTabs(
       title: "New",
-      image: UIImage(systemName: "bus")
+      image: UIImage(systemName: "bus"),
+      viewController: controller
     )
-    let router = NewRouter(navigationController: newNavigationController)
-    router.start()
-    store(with: router, as: .new)
+    
+    store(with: newNavigationController, as: .new)
   }
   
   private func setupSearchViewRouter() {
+    let controller = SearchRouter.createModule()
     let searchNavigationController = configureNavigationControllerWithTabs(
       title: "Search",
-      image: UIImage(systemName: "hammer")
+      image: UIImage(systemName: "hammer"),
+      viewController: controller
     )
-    let router = SearchRouter(navigationController: searchNavigationController)
-    router.start()
-    store(with: router, as: .search)
+    
+    store(with: searchNavigationController, as: .search)
   }
 }
 
 extension TabbarRouter {
   private func setupTabbarController() {
-    let tabbarController: UITabBarController = {
-      $0.tabBar.tintColor = Theme.Colors.PrimaryColor.mainColor
-      $0.viewControllers = childRouters
-        .sorted(by: { $0.0.rawValue < $1.0.rawValue })
-        .map { $0.value.navigationController }
-      return $0
-    }(UITabBarController())
-    self.tabbarController = tabbarController
-    self.navigationController.isNavigationBarHidden = true
-    self.navigationController.setViewControllers([self.tabbarController!], animated: false)
+    self.tabbarBuilder.tabbarController.tabBar.tintColor = Theme.Colors.PrimaryColor.mainColor
+    self.tabbarBuilder.tabbarController.viewControllers = self.childRouters
+      .sorted(by: { $0.0.rawValue < $1.0.rawValue })
+      .map { $0.value }
   }
 }
 
 extension TabbarRouter {
-  private func configureNavigationControllerWithTabs(title: String, image: UIImage?) -> UINavigationController {
+  private func configureNavigationControllerWithTabs(title: String, image: UIImage?, viewController: UIViewController) -> UINavigationController {
     let navigationController: UINavigationController = {
       $0.tabBarItem.title = title
       $0.tabBarItem.image = image
       return $0
-    }(UINavigationController())
+    }(UINavigationController(rootViewController: viewController))
     return navigationController
   }
 }

@@ -8,24 +8,24 @@
 import Foundation
 import RxSwift
 
-protocol SearchViewInterface: class {
-  var presenter: SearchPresenterInterface { get }
+protocol SearchViewInterface: AnyObject {
+  var presenter: SearchPresenterInterface? { get }
 }
 
-protocol SearchInteractorInterface: class {
+protocol SearchInteractorInterface: AnyObject {
   var cacheWrapper: CacheWrapper<String, [Book]> { get }
   var networking: Networking { get }
 
   func fetchPaginatedSearchResult(searchText: Observable<String>, loadNextPage: Observable<Void>) -> Observable<[Book]>
 }
 
-protocol SearchPresenterInterface: class {
-  var interactor: SearchInteractorInterface { get }
-  var router: SearchRouterInterface { get }
+protocol SearchPresenterInterface: AnyObject {
+  var interactor: SearchInteractorInterface? { get }
+  var router: SearchRouterInterface? { get }
   
-  func transform(to inputs: SearchPresenter.Input) -> SearchPresenter.Output
+  func transform(to inputs: SearchPresenter.Input, from view: UIViewController?) -> SearchPresenter.Output
 }
 
-protocol SearchRouterInterface: class {
-  func showBookDetail(to model: Book) 
+protocol SearchRouterInterface: AnyObject {
+  static func createModule() -> UIViewController
 }

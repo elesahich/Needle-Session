@@ -10,16 +10,8 @@ import RxSwift
 import struct RxCocoa.Driver
 
 final class NewPresenter: NewPresenterInterface {
-  let router: NewRouterInterface
-  let interactor: NewInteractorInterface
-  
-  init(
-    router: NewRouterInterface,
-    interactor: NewInteractorInterface
-  ) {
-    self.router = router
-    self.interactor = interactor
-  }
+  var router: NewRouterInterface?
+  var interactor: NewInteractorInterface?
   
   struct Input {
     let viewWillAppear: Observable<Void>
@@ -33,17 +25,17 @@ final class NewPresenter: NewPresenterInterface {
 }
 
 extension NewPresenter {
-  func transform(to inputs: Input) -> Output {
+  func transform(to inputs: Input, from view: UIViewController?) -> Output {
     weak var weakSelf = self
     
     let bookList = inputs.viewWillAppear
       .flatMapLatest { _ -> Observable<[Book]> in
-        return weakSelf?.interactor.fetchNewBookfromAPI() ?? .empty()
+        return weakSelf?.interactor?.fetchNewBookfromAPI() ?? .empty()
       }
     
     let sendDetailView = inputs.modelSelected
       .flatMapLatest { book -> Observable<Void> in
-        weakSelf?.router.showBookDetail(to: book)
+        weakSelf?.router?.showBookDetail(to: book, from: view)
         return .just(())
       }
     

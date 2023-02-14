@@ -18,11 +18,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     registerProviderFactories()
     
     let rootComponent = RootComponent()
-    let tabbarRouter = TabbarRouter(navigationController: UINavigationController())
+    let tabbarRouter = rootComponent.tabRouter
     
     self.window = UIWindow(windowScene: windowScene)
-    self.window?.rootViewController = tabbarRouter.navigationController
-    tabbarRouter.start()
+    self.window?.rootViewController = tabbarRouter.tabbarBuilder.tabbarController
     self.window?.makeKeyAndVisible()
+    tabbarRouter.start()
   }
 }

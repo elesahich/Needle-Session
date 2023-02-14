@@ -1,6 +1,7 @@
 
 
 import NeedleFoundation
+import UIKit
 
 // swiftlint:disable unused_declaration
 private let needleDependenciesHash : String? = nil
@@ -18,6 +19,12 @@ private func parent1(_ component: NeedleFoundation.Scope) -> NeedleFoundation.Sc
 
 #else
 extension RootComponent: Registration {
+    public func registerItems() {
+
+
+    }
+}
+extension TabbarComponent: Registration {
     public func registerItems() {
 
     }
@@ -39,6 +46,7 @@ private func registerProviderFactory(_ componentPath: String, _ factory: @escapi
 
 private func register1() {
     registerProviderFactory("^->RootComponent", factoryEmptyDependencyProvider)
+    registerProviderFactory("^->RootComponent->TabbarComponent", factoryEmptyDependencyProvider)
 }
 #endif
 
