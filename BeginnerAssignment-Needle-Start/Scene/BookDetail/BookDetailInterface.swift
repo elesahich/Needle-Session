@@ -6,6 +6,7 @@
 //  
 //
 
+import RealmSwift
 import UIKit
 
 protocol BookDetailPresenterInterface: AnyObject {
@@ -22,5 +23,8 @@ protocol BookDetailInteractorInterface: AnyObject {
 
 protocol BookDetailRouterInterface: AnyObject {
   func popViewController(from view: UIViewController?)
-  static func createModule(from book: Book) -> BookDetailViewController
+  static func createModule(
+    from book: Book,
+    realmObject: Realm
+  ) -> BookDetailViewController
 }

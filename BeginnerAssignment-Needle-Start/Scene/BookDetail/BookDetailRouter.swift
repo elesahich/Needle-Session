@@ -6,16 +6,19 @@
 //  
 //
 
-import Foundation
 import UIKit
+import RealmSwift
 
 final class BookDetailRouter: BookDetailRouterInterface { }
 
 extension BookDetailRouter {
-  static func createModule(from book: Book) -> BookDetailViewController {
+  static func createModule(
+    from book: Book,
+    realmObject: Realm
+  ) -> BookDetailViewController {
     let view = BookDetailViewController(book: book)
     let presenter = BookDetailPresenter()
-    let interactor = BookDetailInteractor()
+    let interactor = BookDetailInteractor(realm: realmObject)
     let router = BookDetailRouter()
     
     view.presenter = presenter

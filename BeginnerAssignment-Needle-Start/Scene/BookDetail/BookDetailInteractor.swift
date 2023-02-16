@@ -12,8 +12,11 @@ import RxRealm
 import RxSwift
 
 final class BookDetailInteractor: BookDetailInteractorInterface {
-  let networking: Networking = NetworkingService()
-  let realm = try! Realm()
+  private let realm: Realm
+  
+  init(realm: Realm) {
+    self.realm = realm
+  }
 }
 
 extension BookDetailInteractor {
