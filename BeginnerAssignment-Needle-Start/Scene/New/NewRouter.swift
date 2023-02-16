@@ -11,8 +11,8 @@ import RealmSwift
 final class NewRouter: NewRouterInterface { }
 
 extension NewRouter {
-  static func createModule() -> UIViewController {
-    let interactor = NewInteractor()
+  static func createModule(network: Networking) -> NewViewController {
+    let interactor = NewInteractor(network: network)
     let presenter = NewPresenter()
     let router = NewRouter()
     let view = NewViewController()

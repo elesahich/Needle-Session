@@ -9,7 +9,11 @@ import Foundation
 import RxSwift
 
 final class NewInteractor: NewInteractorInterface {
-  let networking: Networking = NetworkingService()
+  let networking: Networking
+  
+  init(network: Networking) {
+    self.networking = network
+  }
 }
 
 extension NewInteractor {

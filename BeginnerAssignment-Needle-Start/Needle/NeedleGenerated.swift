@@ -12,10 +12,27 @@ private func parent1(_ component: NeedleFoundation.Scope) -> NeedleFoundation.Sc
     return component.parent
 }
 
+private func parent2(_ component: NeedleFoundation.Scope) -> NeedleFoundation.Scope {
+    return component.parent.parent
+}
+
 // MARK: - Providers
 
 #if !NEEDLE_DYNAMIC
 
+private class NewDependency2688ffcaacdab8cb2233Provider: NewDependency {
+    var network: Networking {
+        return rootComponent.network
+    }
+    private let rootComponent: RootComponent
+    init(rootComponent: RootComponent) {
+        self.rootComponent = rootComponent
+    }
+}
+/// ^->RootComponent->TabbarComponent->NewComponent
+private func factorydf4669e99932e9220f94a9403e3301bb54f80df0(_ component: NeedleFoundation.Scope) -> AnyObject {
+    return NewDependency2688ffcaacdab8cb2233Provider(rootComponent: parent2(component) as! RootComponent)
+}
 
 #else
 extension RootComponent: Registration {
@@ -27,6 +44,12 @@ extension RootComponent: Registration {
 extension TabbarComponent: Registration {
     public func registerItems() {
 
+
+    }
+}
+extension NewComponent: Registration {
+    public func registerItems() {
+        keyPathToName[\NewDependency.network] = "network-Networking"
     }
 }
 
@@ -47,6 +70,7 @@ private func registerProviderFactory(_ componentPath: String, _ factory: @escapi
 private func register1() {
     registerProviderFactory("^->RootComponent", factoryEmptyDependencyProvider)
     registerProviderFactory("^->RootComponent->TabbarComponent", factoryEmptyDependencyProvider)
+    registerProviderFactory("^->RootComponent->TabbarComponent->NewComponent", factorydf4669e99932e9220f94a9403e3301bb54f80df0)
 }
 #endif
 

@@ -6,3 +6,17 @@
 //
 
 import NeedleFoundation
+
+protocol NewDependency: Dependency {
+  var network: Networking { get }
+}
+
+final class NewComponent: Component<NewDependency>, NewBuilder {
+  func createModule() -> NewViewController {
+    return NewRouter.createModule(network: dependency.network)
+  }
+}
+
+protocol NewBuilder {
+  func createModule() -> NewViewController
+}

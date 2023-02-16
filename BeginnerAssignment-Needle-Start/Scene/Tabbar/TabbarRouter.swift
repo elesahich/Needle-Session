@@ -12,14 +12,18 @@ enum TabbarChildType: Int {
   case search
 }
 
+// Tabbar 전용 Router class
 final class TabbarRouter {
   let tabbarController: UITabBarController
+  private let newBuilder: NewBuilder
   private var childRouters: [TabbarChildType: UINavigationController]
   
   init(
-    tabbarController: UITabBarController
+    tabbarController: UITabBarController,
+    newBuilder: NewBuilder
   ) {
     self.tabbarController = tabbarController
+    self.newBuilder = newBuilder
     self.childRouters = [:]
   }
 }
@@ -32,7 +36,6 @@ extension TabbarRouter {
     setupTabbarController()
   }
   
-  
   private func store(with router: UINavigationController, as type: TabbarChildType) {
     childRouters[type] = router
   }
@@ -40,7 +43,7 @@ extension TabbarRouter {
 
 extension TabbarRouter {
   private func setupNewViewRouter() {
-    let controller = NewRouter.createModule()
+    let controller = self.newBuilder.createModule()
     let newNavigationController = configureNavigationControllerWithTabs(
       title: "New",
       image: UIImage(systemName: "bus"),

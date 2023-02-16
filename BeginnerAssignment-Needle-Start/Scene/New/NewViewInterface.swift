@@ -27,5 +27,5 @@ protocol NewPresenterInterface: AnyObject {
 
 protocol NewRouterInterface: AnyObject {
   func showBookDetail(to model: Book, from view: UIViewController?)
-  static func createModule() -> UIViewController
+  static func createModule(network: Networking) -> NewViewController
 }
