@@ -11,17 +11,10 @@ import RxSwift
 import struct RxCocoa.Driver
 
 final class BookDetailPresenter: BookDetailPresenterInterface {
-  let interactor: BookDetailInteractorInterface
-  let router: BookDetailRouterInterface
+  var interactor: BookDetailInteractorInterface?
+  var router: BookDetailRouterInterface?
   
-  init(
-    interactor: BookDetailInteractorInterface,
-    router: BookDetailRouterInterface
-  ) {
-    self.interactor = interactor
-    self.router = router
-  }
-  
+  init() { }
   struct Input {
     let book: Book
     let viewDidLoad: Observable<Void>
@@ -35,19 +28,19 @@ final class BookDetailPresenter: BookDetailPresenterInterface {
 }
 
 extension BookDetailPresenter {
-  func transform(to inputs: Input) -> Output {
+  func transform(to inputs: Input, from view: UIViewController?) -> Output {
     weak var weakSelf = self
     
     let memoObject = inputs.viewDidLoad
       .flatMap { _ -> Observable<BookWithMemoObject?> in
-        let object = weakSelf?.interactor.fetchMemobyISBN(isbn: inputs.book.isbn13)
+        let object = weakSelf?.interactor?.fetchMemobyISBN(isbn: inputs.book.isbn13)
         return .just(object)
       }
     
     let saveAction = inputs.saveAction
       .flatMap { memo -> Observable<Void> in
-        weakSelf?.interactor.saveMemoWithISBN(isbn: inputs.book.isbn13, memo: memo)
-        weakSelf?.router.popViewController()
+        weakSelf?.interactor?.saveMemoWithISBN(isbn: inputs.book.isbn13, memo: memo)
+        weakSelf?.router?.popViewController(from: view)
         return .just(())
       }
         

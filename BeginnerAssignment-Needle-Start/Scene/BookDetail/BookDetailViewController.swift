@@ -14,7 +14,6 @@ import SnapKit
 final class BookDetailViewController: UIViewController {
   private var bookDetailView: BookDetailView!
   private let disposeBag = DisposeBag()
-  private let presenter: BookDetailPresenterInterface
   private let book: Book
   private let rightButton: UIButton = {
     $0.setTitle("저장", for: .normal)
@@ -23,12 +22,10 @@ final class BookDetailViewController: UIViewController {
     return $0
   }(UIButton(frame: .zero))
   
-  init(
-    book: Book,
-    presenter: BookDetailPresenterInterface
-  ) {
+  var presenter: BookDetailPresenterInterface?
+  
+  init(book: Book) {
     self.book = book
-    self.presenter = presenter
     super.init(nibName: nil, bundle: nil)
   }
   
@@ -59,15 +56,15 @@ extension BookDetailViewController {
       viewDidLoad: rx.methodInvoked(#selector(UIViewController.viewWillAppear(_:))).map { _ in },
       saveAction: rightButton.rx.tap.withLatestFrom(textView.rx.text.orEmpty).asObservable()
     )
-    let outputs = presenter.transform(to: inputs)
+    let outputs = presenter?.transform(to: inputs, from: self)
     
-    outputs.memoObject
+    outputs?.memoObject
       .drive(onNext: { [weak textView] object in
         textView?.text = object?.memo
       })
       .disposed(by: disposeBag)
     
-    outputs.saveAction
+    outputs?.saveAction
       .drive()
       .disposed(by: disposeBag)
   }

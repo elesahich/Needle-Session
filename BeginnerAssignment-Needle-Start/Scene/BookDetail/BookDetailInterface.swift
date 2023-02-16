@@ -6,20 +6,21 @@
 //  
 //
 
-import Foundation
+import UIKit
 
-protocol BookDetailPresenterInterface: class {
-  var interactor: BookDetailInteractorInterface { get }
-  var router: BookDetailRouterInterface { get }
+protocol BookDetailPresenterInterface: AnyObject {
+  var interactor: BookDetailInteractorInterface? { get }
+  var router: BookDetailRouterInterface? { get }
   
-  func transform(to inputs: BookDetailPresenter.Input) -> BookDetailPresenter.Output
+  func transform(to inputs: BookDetailPresenter.Input, from view: UIViewController?) -> BookDetailPresenter.Output
 }
 
-protocol BookDetailInteractorInterface: class {
+protocol BookDetailInteractorInterface: AnyObject {
   func fetchMemobyISBN(isbn: String) -> BookWithMemoObject?
   func saveMemoWithISBN(isbn: String, memo: String) -> Void
 }
 
-protocol BookDetailRouterInterface: class {
-  func popViewController()
+protocol BookDetailRouterInterface: AnyObject {
+  func popViewController(from view: UIViewController?)
+  static func createModule(from book: Book) -> BookDetailViewController
 }

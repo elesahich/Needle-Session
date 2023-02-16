@@ -9,15 +9,23 @@
 import Foundation
 import UIKit
 
-final class BookDetailRouter: BookDetailRouterInterface {
-  let navigationController: UINavigationController
+final class BookDetailRouter: BookDetailRouterInterface { }
+
+extension BookDetailRouter {
+  static func createModule(from book: Book) -> BookDetailViewController {
+    let view = BookDetailViewController(book: book)
+    let presenter = BookDetailPresenter()
+    let interactor = BookDetailInteractor()
+    let router = BookDetailRouter()
     
-  init(navigationController: UINavigationController) {
-    self.navigationController = navigationController
+    view.presenter = presenter
+    presenter.interactor = interactor
+    presenter.router = router
+    
+    return view
   }
   
-  func start() { }
-  func popViewController() {
-    navigationController.popViewController(animated: true)
+  func popViewController(from view: UIViewController?) {
+    view?.navigationController?.popViewController(animated: true)
   }
 }

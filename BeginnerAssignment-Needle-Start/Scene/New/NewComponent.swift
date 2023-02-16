@@ -13,7 +13,14 @@ protocol NewDependency: Dependency {
 
 final class NewComponent: Component<NewDependency>, NewBuilder {
   func createModule() -> NewViewController {
-    return NewRouter.createModule(network: dependency.network)
+    return NewRouter.createModule(
+      network: dependency.network,
+      bookDetailBuilder: self.bookDetailComponent
+    )
+  }
+  
+  var bookDetailComponent: BookDetailComponent {
+    return BookDetailComponent(parent: self)
   }
 }
 
