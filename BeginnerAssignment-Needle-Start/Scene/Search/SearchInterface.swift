@@ -27,5 +27,6 @@ protocol SearchPresenterInterface: AnyObject {
 }
 
 protocol SearchRouterInterface: AnyObject {
-  static func createModule() -> UIViewController
+  static func createModule(bookDetailBuilder: BookDetailBuilder) -> SearchViewController
+  func showDetailViewController(to model: Book, from view: UIViewController?)
 }

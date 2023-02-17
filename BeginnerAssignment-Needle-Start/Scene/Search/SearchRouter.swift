@@ -8,13 +8,19 @@
 import UIKit
 import RealmSwift
 
-final class SearchRouter: SearchRouterInterface { }
+final class SearchRouter: SearchRouterInterface {
+  private let bookdetailBuilder: BookDetailBuilder
+  
+  init(bookdetailBuilder: BookDetailBuilder) {
+    self.bookdetailBuilder = bookdetailBuilder
+  }
+}
 
 extension SearchRouter {
-  static func createModule() -> UIViewController {
+  static func createModule(bookDetailBuilder: BookDetailBuilder) -> SearchViewController {
     let interactor = SearchInteractor()
     let presenter = SearchPresenter()
-    let router = SearchRouter()
+    let router = SearchRouter(bookdetailBuilder: bookDetailBuilder)
     let view = SearchViewController()
     
     presenter.interactor = interactor
@@ -26,19 +32,8 @@ extension SearchRouter {
 }
 
 extension SearchRouter {
-  func showBookDetail(to model: Book) {
-//    let interactor = BookDetailInteractor()
-//    let router = BookDetailRouter(navigationController: navigationController)
-//    let presenter = BookDetailPresenter(
-//      interactor: interactor,
-//      router: router
-//    )
-//
-//    let bookDetailViewController = BookDetailViewController(
-//      book: model,
-//      presenter: presenter
-//    )
-//    bookDetailViewController.hidesBottomBarWhenPushed = true
-//    navigationController.pushViewController(bookDetailViewController, animated: true)
+  func showDetailViewController(to model: Book, from view: UIViewController?) {
+    let controller = self.bookdetailBuilder.createModule(book: model)
+    view?.navigationController?.pushViewController(controller, animated: true)
   }
 }

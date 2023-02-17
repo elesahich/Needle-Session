@@ -16,14 +16,17 @@ enum TabbarChildType: Int {
 final class TabbarRouter {
   let tabbarController: UITabBarController
   private let newBuilder: NewBuilder
+  private let searchBuilder: SearchBuilder
   private var childRouters: [TabbarChildType: UINavigationController]
   
   init(
     tabbarController: UITabBarController,
-    newBuilder: NewBuilder
+    newBuilder: NewBuilder,
+    searchBuilder: SearchBuilder
   ) {
     self.tabbarController = tabbarController
     self.newBuilder = newBuilder
+    self.searchBuilder = searchBuilder
     self.childRouters = [:]
   }
 }
@@ -54,7 +57,7 @@ extension TabbarRouter {
   }
   
   private func setupSearchViewRouter() {
-    let controller = SearchRouter.createModule()
+    let controller = self.searchBuilder.createModule()
     let searchNavigationController = configureNavigationControllerWithTabs(
       title: "Search",
       image: UIImage(systemName: "hammer"),

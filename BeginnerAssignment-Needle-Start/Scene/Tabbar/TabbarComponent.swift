@@ -17,6 +17,10 @@ final class TabbarComponent: Component<EmptyDependency>, TabbarBuilder {
   var newComponent: NewComponent {
     return NewComponent(parent: self)
   }
+  
+  var searchComponent: SearchComponent {
+    return SearchComponent(parent: self)
+  }
 }
 
 // Tabbar의 ViewController에 대한 인터페이스. 채널식으로는 `CreateModule`을 사용할 것임

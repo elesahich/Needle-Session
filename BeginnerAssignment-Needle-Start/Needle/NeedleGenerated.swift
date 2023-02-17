@@ -21,6 +21,17 @@ private func parent2(_ component: NeedleFoundation.Scope) -> NeedleFoundation.Sc
 
 #if !NEEDLE_DYNAMIC
 
+private class SearchDependency9bd17fe54d46487efa21Provider: SearchDependency {
+
+
+    init() {
+
+    }
+}
+/// ^->RootComponent->TabbarComponent->SearchComponent
+private func factory59a0e987a687777c7753e3b0c44298fc1c149afb(_ component: NeedleFoundation.Scope) -> AnyObject {
+    return SearchDependency9bd17fe54d46487efa21Provider()
+}
 private class NewDependency2688ffcaacdab8cb2233Provider: NewDependency {
     var network: Networking {
         return rootComponent.network
@@ -53,6 +64,12 @@ extension TabbarComponent: Registration {
 
     }
 }
+extension SearchComponent: Registration {
+    public func registerItems() {
+
+
+    }
+}
 extension NewComponent: Registration {
     public func registerItems() {
         keyPathToName[\NewDependency.network] = "network-Networking"
@@ -76,8 +93,10 @@ private func registerProviderFactory(_ componentPath: String, _ factory: @escapi
 
 private func register1() {
     registerProviderFactory("^->RootComponent", factoryEmptyDependencyProvider)
+    registerProviderFactory("^->RootComponent->TabbarComponent->SearchComponent->BookDetailComponent", factoryEmptyDependencyProvider)
     registerProviderFactory("^->RootComponent->TabbarComponent->NewComponent->BookDetailComponent", factoryEmptyDependencyProvider)
     registerProviderFactory("^->RootComponent->TabbarComponent", factoryEmptyDependencyProvider)
+    registerProviderFactory("^->RootComponent->TabbarComponent->SearchComponent", factory59a0e987a687777c7753e3b0c44298fc1c149afb)
     registerProviderFactory("^->RootComponent->TabbarComponent->NewComponent", factorydf4669e99932e9220f94a9403e3301bb54f80df0)
 }
 #endif

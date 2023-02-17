@@ -13,7 +13,8 @@ final class RootComponent: BootstrapComponent {
   var tabRouter: TabbarRouter {
     return TabbarRouter(
       tabbarController: self.tabbarComponent.tabbarController,
-      newBuilder: self.tabbarComponent.newComponent
+      newBuilder: self.tabbarComponent.newComponent,
+      searchBuilder: self.tabbarComponent.searchComponent
     )
   }
 }
