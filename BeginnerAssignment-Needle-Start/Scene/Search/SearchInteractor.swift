@@ -9,10 +9,16 @@ import Foundation
 import RxSwift
 
 final class SearchInteractor: SearchInteractorInterface {
-  let networking: Networking = NetworkingService()
-  let cacheWrapper: CacheWrapper<String, [Book]> = CacheWrapper(base: Cache())
+  let networking: Networking
+  let cacheWrapper: CacheWrapper<String, [Book]>
   
-  init() {
+  /// 내부에서 사용하는 의존성은 클래스 이니셜라이저에서 주입받도록 합니다.
+  init(
+    networking: Networking,
+    cacheWrapper: CacheWrapper<String, [Book]>
+  ) {
+    self.networking = networking
+    self.cacheWrapper = cacheWrapper
   }
 }
 

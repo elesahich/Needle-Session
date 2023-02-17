@@ -9,12 +9,16 @@ import UIKit
 import NeedleFoundation
 
 protocol SearchDependency: Dependency {
-  
+  var network: Networking { get }
 }
 
 final class SearchComponent: Component<SearchDependency>, SearchBuilder {
   func createModule() -> SearchViewController {
-    return SearchRouter.createModule(bookDetailBuilder: self.bookDetailComponent)
+    return SearchRouter.createModule(
+      bookDetailBuilder: self.bookDetailComponent,
+      networking: dependency.network,
+      cacheWrapper: CacheWrapper(base: Cache())
+    )
   }
   
   var bookDetailComponent: BookDetailComponent {

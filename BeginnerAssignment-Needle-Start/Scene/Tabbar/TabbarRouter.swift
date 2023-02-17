@@ -15,6 +15,8 @@ enum TabbarChildType: Int {
 // Tabbar 전용 Router class
 final class TabbarRouter {
   let tabbarController: UITabBarController
+  
+  /// tabbar에서는 New, Search ViewController로 이동할 수 있으므로 이 클래스 내부에 각 컴포넌트의 `builder`를 가집니다.
   private let newBuilder: NewBuilder
   private let searchBuilder: SearchBuilder
   private var childRouters: [TabbarChildType: UINavigationController]
@@ -46,6 +48,7 @@ extension TabbarRouter {
 
 extension TabbarRouter {
   private func setupNewViewRouter() {
+    /// `NewRouter.createModule` static 함수를 직접 호출하지 않습니다.
     let controller = self.newBuilder.createModule()
     let newNavigationController = configureNavigationControllerWithTabs(
       title: "New",
@@ -57,6 +60,7 @@ extension TabbarRouter {
   }
   
   private func setupSearchViewRouter() {
+    /// `SearchRouter.createModule` static 함수를 직접 호출하지 않습니다.
     let controller = self.searchBuilder.createModule()
     let searchNavigationController = configureNavigationControllerWithTabs(
       title: "Search",

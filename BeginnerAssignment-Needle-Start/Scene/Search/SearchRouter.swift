@@ -17,8 +17,15 @@ final class SearchRouter: SearchRouterInterface {
 }
 
 extension SearchRouter {
-  static func createModule(bookDetailBuilder: BookDetailBuilder) -> SearchViewController {
-    let interactor = SearchInteractor()
+  static func createModule(
+    bookDetailBuilder: BookDetailBuilder,
+    networking: Networking,
+    cacheWrapper: CacheWrapper<String, [Book]>
+  ) -> SearchViewController {
+    let interactor = SearchInteractor(
+      networking: networking,
+      cacheWrapper: cacheWrapper
+    )
     let presenter = SearchPresenter()
     let router = SearchRouter(bookdetailBuilder: bookDetailBuilder)
     let view = SearchViewController()
