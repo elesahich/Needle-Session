@@ -21,7 +21,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     let tabbarRouter = rootComponent.tabRouter
     
     self.window = UIWindow(windowScene: windowScene)
-    self.window?.rootViewController = tabbarRouter.tabbarBuilder.tabbarController
+    self.window?.rootViewController = tabbarRouter.tabbarController
     self.window?.makeKeyAndVisible()
     tabbarRouter.start()
   }

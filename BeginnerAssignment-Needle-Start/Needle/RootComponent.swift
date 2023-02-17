@@ -10,7 +10,7 @@ import NeedleFoundation
 
 final class RootComponent: BootstrapComponent {
   var tabRouter: TabbarRouter {
-    return TabbarRouter(tabbarBuilder: self.tabbarComponent)
+    return TabbarRouter(tabbarController: self.tabbarComponent.tabbarController)
   }
 }
 

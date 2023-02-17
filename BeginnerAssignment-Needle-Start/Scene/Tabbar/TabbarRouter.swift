@@ -13,13 +13,13 @@ enum TabbarChildType: Int {
 }
 
 final class TabbarRouter {
-  let tabbarBuilder: TabbarBuilder
+  let tabbarController: UITabBarController
   private var childRouters: [TabbarChildType: UINavigationController]
   
   init(
-    tabbarBuilder: TabbarBuilder
+    tabbarController: UITabBarController
   ) {
-    self.tabbarBuilder = tabbarBuilder
+    self.tabbarController = tabbarController
     self.childRouters = [:]
   }
 }
@@ -64,8 +64,8 @@ extension TabbarRouter {
 
 extension TabbarRouter {
   private func setupTabbarController() {
-    self.tabbarBuilder.tabbarController.tabBar.tintColor = Theme.Colors.PrimaryColor.mainColor
-    self.tabbarBuilder.tabbarController.viewControllers = self.childRouters
+    self.tabbarController.tabBar.tintColor = Theme.Colors.PrimaryColor.mainColor
+    self.tabbarController.viewControllers = self.childRouters
       .sorted(by: { $0.0.rawValue < $1.0.rawValue })
       .map { $0.value }
   }
